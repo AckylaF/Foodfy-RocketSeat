@@ -1,0 +1,37 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/receitas.css">
+    <title>Receitas - Foodfy</title>
+{% endblock %}
+
+{% block content %}
+<main>
+    {% for item in items %}
+    <section id="recipes">
+        <div class="cards" id="{{item.id}}">
+            <img src="{{item.imgSource}}" alt="{{item.foodName}}">
+            <h5 class="food-name">{{item.foodName}}</h5>
+            <p class="cook">{{item.chef}}</p>
+        </div>
+    </section>
+        
+    {% endfor %}
+
+    <div class="modal-overlay">
+        <div class="rectangle">
+            <img  class="overlay-image" src="">
+            <h5 class="dish"></h5>
+            <p class="chef"></p>
+            <p class="close-modal"><a>Fechar</a></p>
+        </div>
+
+    </div>
+</main>
+
+<footer><p>Todos os direitos reservados, Receitas Foodfy.</p></footer>
+
+<script src="receitas.js"></script>
+
+{% endblock %}
