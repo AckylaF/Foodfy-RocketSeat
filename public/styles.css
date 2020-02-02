@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+:root{
+    --title-color: #111111;
+}
+body{
+    width: 940px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    margin: 31px 0 50px 0;
+}
+#logo{
+    width: 90.6px;
+    height: 26.9px;
+}
+#logo, #menu {
+    display: inline-block;
+}
+#menu ul{
+    margin: 6px 0 0 130px;
+    padding-left: 0;
+}
+#menu ul li{
+    display: inline;
+    margin-right: 32px;
+    font-size: 16px;
+    line-height: 19px;
+}
+#menu ul li a{
+    text-decoration: none;
+    color: var(--title-color);
+}
+#headline{
+    background-color: #FBDFDB;
+    height: 366px;
+    border-radius: 30px;
+    position: relative;
+}
+#headline h2{
+    color: var(--title-color);
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 38px;
+    position: absolute;
+    left: 7%;
+    top: 24%;
+}
+#headline p{
+    color: var(--title-color);
+    font-size: 18px;
+    line-height: 28px;
+    width: 316px;
+    height: 84px;
+    opacity: 70%;
+    position: absolute;
+    left: 7%;
+    bottom: 28.6%;
+}
+#headline-image{
+    position: absolute;
+    right: 11.1%;
+    bottom: 0;
+}
+h3{
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--title-color);
+    margin: 45px 0 20px 0;
+}
+#most-viewed{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+} 
+section div img{
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.food-name{
+    color: var(--title-color);
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: normal;
+    margin-top: 14px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+section div p{
+    color: #777777;
+    opacity: 90%;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+}
+.rectangle{
+    width: 660px;
+    height: 413px;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 100%;
+    border-radius: 16px;
+    margin: 130px auto;
+    
+}
+.overlay-image{
+    width: 600px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 30px 30px 0;
+}
+.dish{
+    font-size: 24px;
+    color: #111111;
+    text-align: center;
+    margin: 20px 0 5px
+}
+.chef{
+    font-size: 18px;
+    color: #777777;
+    margin-top: 0;
+    bottom: 50px;
+    text-align: center;
+}
+.close-modal{
+    text-align: center;
+    font-size: 16px;
+    color: #999999;
+    margin-top: 60px;
+    cursor: pointer;
+}
+.active{
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+    transition: 200ms;
+}
+footer{
+    background-color: #EEEEEE;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    
+}
+footer p{
+    font-size: 14px;
+    line-height: 16px;
+    color: #999999;
+    text-align: center;
+    margin-top: 20px;
+}

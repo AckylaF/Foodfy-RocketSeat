@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    {% block head %}{% endblock %}
+
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img id="logo" src="/layouts/assets/logo.png" alt="logo foodfy">
+        </a>
+        <nav id="menu">
+            <ul>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/receitas">Receitas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>
