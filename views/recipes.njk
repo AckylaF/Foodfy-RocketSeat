@@ -1,0 +1,36 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/recipes.css">
+    <title>Receitas - Foodfy</title>
+{% endblock %}
+
+
+{% block content %}
+
+<main>
+    <section id="highlight">
+        <img src="{{item.imgSource}}" alt="{{item.foodName}}">
+        <h1 class="food-name">{{item.foodName}}</h1>
+        <p class="cook">{{item.chef}}</p>
+    </section>
+
+    <section id="instructions"> 
+        <div>
+            <h2>Ingredientes <a>Mostrar</a></h2>
+            <p>{{item.ingredients}}</p>
+        </div>
+        <div>
+            <h2>Modo de preparo <a>Mostrar</a></h2>
+            <p>{{item.preparation}}</p>
+        </div>
+        <div>
+            <h2>Informações adicionais <a>Mostrar</a></h2>
+            <p>{{item.information}}</p>
+        </div>
+    </section>
+   
+</main>
+
+{% endblock %}
