@@ -61,11 +61,12 @@ h2{
     color: #111111;
 
 }
-#instructions a{
+.show-link{
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 0;
     color: #999999;
+    cursor: pointer;
 }
 #instructions p{
     font-size: 18px;

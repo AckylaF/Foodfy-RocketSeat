@@ -18,19 +18,20 @@
 
     <section id="instructions"> 
         <div>
-            <h2>Ingredientes <a>Mostrar</a></h2>
-            <p>{{item.ingredients}}</p>
+            <h2>Ingredientes <a class="show-link">Mostrar</a></h2>
+            <p id="ingredient"></p>
         </div>
         <div>
-            <h2>Modo de preparo <a>Mostrar</a></h2>
-            <p>{{item.preparation}}</p>
+            <h2>Modo de preparo <a class="show-link">Mostrar</a></h2>
+            <p id="preparation"></p>
         </div>
         <div>
-            <h2>Informações adicionais <a>Mostrar</a></h2>
-            <p>{{item.information}}</p>
+            <h2>Informações adicionais <a class="show-link">Mostrar</a></h2>
+            <p id="info"></p>
         </div>
     </section>
    
 </main>
 
+<script src="server.js"></script>
 {% endblock %}
