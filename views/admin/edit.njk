@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/styles/create.css">
+
+    <title>Nova receita - Foodfy</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img id="logo" src="/layouts/assets/logo2.png" alt="logo foodfy">
+        </a>
+    </header>
+
+    <main>
+        <form method="POST" action="/admin/recipes?_method=PUT">
+            <div id="top">
+            
+                <h1>Criando receita</h1>
+                <button type="submit">Salvar receita</button>
+            
+            </div>
+
+            {% include "admin/fields.njk" %}
+
+            <input 
+                type="hidden" 
+                name="id" 
+                value="{{ recipe.id }}"
+            >
+        
+        </form>
+        <form id="form-delete" action="/admin/recipes?_method=DELETE" method="post">
+                <input 
+                    type="hidden"
+                    name="id"
+                    value="{{recipe.id}}"
+                >
+                <button id="delete" type="submit">Deletar</button>
+            </form>
+    </main>
+</body>    
+</html>

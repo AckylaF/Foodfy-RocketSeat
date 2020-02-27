@@ -1,0 +1,43 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles/show.css">
+    <title>Receitas - Foodfy</title>
+{% endblock %}
+
+
+{% block content %}
+
+<main>
+    <div id="title-container">
+        <p id="title">Receita: {{recipe.foodName}}</p>
+        <a href="/admin/recipes/{{recipe.id}}/edit">
+            <button id="edit-recipe">Editar receita</button>
+        </a>
+    </div>
+    <section id="highlight">
+        <img class="food-image" src="{{recipe.imgSource}}" alt="{{recipe.foodName}}">
+        <h1 class="food-name">{{recipe.foodName}}</h1>
+        <p class="cook">{{recipe.chef}}</p>
+    </section>
+
+    <section id="instructions"> 
+        <div>
+            <h2>Ingredientes <a id="show-ingredient" class="show-link">Mostrar</a></h2>
+            <p class="hide-show" id="ingredient">{{recipe.ingredients}}</p>
+        </div>
+        <div>
+            <h2>Modo de preparo <a id="show-preparation" class="show-link">Mostrar</a></h2>
+            <p class="hide-show" id="preparation">{{recipe.preparation}}</p>
+        </div>
+        <div>
+            <h2>Informações adicionais <a id="show-info" class="show-link">Mostrar</a></h2>
+            <p class="hide-show" id="info">{{ recipe.information }}</p>
+        </div>
+    </section>
+   
+</main>
+
+<script src="/scripts/mostraReceita.js"></script>
+{% endblock %}

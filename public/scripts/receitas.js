@@ -15,3 +15,4 @@ document.querySelector('.close-modal').addEventListener('click', function(){
     modal.classList.remove('active');
     document.querySelector('.overlay-image').setAttribute('src', "")
 })
+

@@ -1,0 +1,57 @@
+    
+        <div class="fields">
+            <p>Imagem da receita</p>
+            <input 
+                type="text"
+                name="imgSource"
+                value="{{recipe.imgSource}}"
+            >
+        </div>
+        <div class="fields">
+            <p>Nome da receita</p>
+            <input 
+                type="text" 
+                name="foodName"
+                value="{{recipe.foodName}}"
+            >
+        </div>
+        <div class="fields">
+            <p>Autor</p>
+            <input 
+                type="text" 
+                name="chef"
+                value="{{recipe.chef}}"
+            >
+        </div>
+        <div class="fields" id="ingredients">
+            <p>Ingredientes</p>
+            <div class="ingredient">
+            <input 
+                type="text" 
+                name="ingredients[]"
+                value="{{recipe.ingredients}}"
+            >
+            </div>
+        </div>
+        <a class="add-ingredient">Adicionar ingrediente</a>
+        <div class="fields" id="steps">
+            <p>Modo de preparo</p>
+            <div class="step">
+            <input 
+                type="text" 
+                name="preparation[]"
+                value="{{recipe.preparation}}"
+            >
+            </div>
+        </div>
+        <a class="add-step">Adicionar novo passo</a>
+        <div class="fields">
+            <p>Informações adicionais</p>
+            <input 
+                type="text" 
+                name="information"
+                value="{{recipe.information}}"
+            >
+        </div>
+
+<script src="/scripts/addField.js"></script>

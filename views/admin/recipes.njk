@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receitas - Foodfy</title>
+    <link rel="stylesheet" href="/styles/recipes.css">
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img id="logo" src="/layouts/assets/logo2.png" alt="logo foodfy">
+        </a>
+    </header>
+
+    <main>
+    
+    <h1>Gerenciar receitas</h1>
+
+    <section id="recipes">
+    {% for recipe in recipes %}
+        <div class="cards" id="{{recipe.id}}">
+            <span>
+                <img src="{{recipe.imgSource}}" alt="{{recipe.foodName}}">
+            </span>
+            <span>
+                <h5 class="food-name">{{recipe.foodName}}</h5>
+                <p class="cook">{{recipe.chef}}</p>
+                <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+            </span>
+        </div>
+    {% endfor %}
+    </section>
+    
+    </main>
+</body>
+</html>

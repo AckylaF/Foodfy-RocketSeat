@@ -2,18 +2,18 @@
 
 {% block head %}
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/receitas.css">
+    <link rel="stylesheet" href="/styles/receitas.css">
     <title>Receitas - Foodfy</title>
 {% endblock %}
 
 {% block content %}
 <main>
     <section id="recipes">
-    {% for item in items %}
-        <div class="cards" id="{{item.id}}">
-            <img src="{{item.imgSource}}" alt="{{item.foodName}}">
-            <h5 class="food-name">{{item.foodName}}</h5>
-            <p class="cook">{{item.chef}}</p>
+    {% for recipe in recipes %}
+        <div class="cards" id="{{recipe.id}}">
+            <img src="{{recipe.imgSource}}" alt="{{recipe.foodName}}">
+            <h5 class="food-name">{{recipe.foodName}}</h5>
+            <p class="cook">{{recipe.chef}}</p>
         </div>
     {% endfor %}
     </section>

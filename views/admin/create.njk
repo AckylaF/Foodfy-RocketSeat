@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/styles/create.css">
+
+    <title>Nova receita - Foodfy</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img id="logo" src="/layouts/assets/logo2.png" alt="logo foodfy">
+        </a>
+    </header>
+    <main>
+        <form method="POST" action="/admin/recipes">
+            <div id="top">
+                <h1>Criando receita</h1>
+                <button type="submit">Salvar</button>
+            </div>
+
+            {% include "admin/fields.njk" %}
+            
+        </form>
+    </main>
+    
+</body>
+</html>
